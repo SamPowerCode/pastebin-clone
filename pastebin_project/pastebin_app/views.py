@@ -24,5 +24,3 @@ def paste_detail(request, pk):
     formatter = HtmlFormatter()
     highlighted_code = highlight(paste.content, lexer, formatter)
     return render(request, 'paste_detail.html', {'paste': paste, 'highlighted_code': highlighted_code})
-    # paste = get_object_or_404(Paste, pk=pk)
-    # return render(request, 'paste_detail.html', {'paste': paste})
